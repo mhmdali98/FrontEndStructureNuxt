@@ -30,7 +30,7 @@ export interface AppearanceSettings {
 export const DEFAULT_APPEARANCE: AppearanceSettings = {
   version: 1,
   primary: 'brand',
-  secondary: 'violet',
+  secondary: 'cyan',
   neutral: 'slate',
   radius: 0.375,
   layout: 'sidebar',
@@ -47,7 +47,7 @@ export const DEFAULT_APPEARANCE: AppearanceSettings = {
 export type AppearancePresetName = 'default' | 'ocean' | 'forest' | 'sunset' | 'mono'
 
 export const APPEARANCE_PRESETS: Record<AppearancePresetName, Pick<AppearanceSettings, 'primary' | 'secondary' | 'neutral'>> = {
-  default: { primary: 'brand', secondary: 'violet', neutral: 'slate' },
+  default: { primary: 'brand', secondary: 'cyan', neutral: 'slate' },
   ocean: { primary: 'sky', secondary: 'teal', neutral: 'slate' },
   forest: { primary: 'emerald', secondary: 'lime', neutral: 'stone' },
   sunset: { primary: 'orange', secondary: 'rose', neutral: 'neutral' },

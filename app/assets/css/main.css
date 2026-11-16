@@ -4,18 +4,18 @@
 @theme static {
   --font-sans: "Inter", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
 
-  /* Custom brand palette (indigo-blue), usable as `ui.colors.primary = 'brand'` */
-  --color-brand-50: oklch(97.1% 0.014 268);
-  --color-brand-100: oklch(93.5% 0.032 268);
-  --color-brand-200: oklch(87.6% 0.062 268);
-  --color-brand-300: oklch(79.4% 0.105 268);
-  --color-brand-400: oklch(68.9% 0.155 268);
-  --color-brand-500: oklch(59.6% 0.195 268);
-  --color-brand-600: oklch(52.6% 0.214 268);
-  --color-brand-700: oklch(45.9% 0.195 268);
-  --color-brand-800: oklch(39.4% 0.158 268);
-  --color-brand-900: oklch(34.4% 0.122 268);
-  --color-brand-950: oklch(25.7% 0.084 268);
+  /* Custom brand palette (blue), usable as `ui.colors.primary = 'brand'` */
+  --color-brand-50: oklch(97.0% 0.014 255);
+  --color-brand-100: oklch(93.2% 0.032 255);
+  --color-brand-200: oklch(88.2% 0.059 255);
+  --color-brand-300: oklch(80.9% 0.105 255);
+  --color-brand-400: oklch(70.7% 0.165 255);
+  --color-brand-500: oklch(62.3% 0.214 259);
+  --color-brand-600: oklch(54.6% 0.245 262);
+  --color-brand-700: oklch(48.8% 0.243 264);
+  --color-brand-800: oklch(42.4% 0.199 265);
+  --color-brand-900: oklch(37.9% 0.146 265);
+  --color-brand-950: oklch(28.2% 0.091 268);
 }
 
 :root,

@@ -251,12 +251,6 @@
     "stone": "Stone"
   },
   "shellAuth": {
-    "headline": "Run your operations from one calm, fast dashboard.",
-    "subhead": "Role-based access, bilingual by design, and a look you can make your own.",
-    "bullets": {
-      "secure": "Tokens never touch the browser — sessions are sealed server-side.",
-      "i18n": "English and Arabic with full right-to-left support.",
-      "theming": "Live theming: colors, layout, sidebar and density."
-    }
+    "headline": "Run your operations from one calm, fast dashboard."
   }
 }
