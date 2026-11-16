@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      HUSKY: 0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm i -g pnpm@12
+      - run: pnpm install --frozen-lockfile
+      - name: Generate a per-run app secret
+        run: echo "NUXT_APP_SECRET=$(openssl rand -base64 32)" >> "$GITHUB_ENV"
+      - run: pnpm lint
+      - run: pnpm check:rtl
+      - run: pnpm check:i18n
+      - run: pnpm typecheck
+      - run: pnpm test:coverage
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm check:bundle
+      - name: E2E (mock backend)
+        run: pnpm test:e2e --project chromium
+        env:
+          E2E_SKIP_BUILD: 1
+      - name: Real-HTTP smoke (BFF → mock over HTTP)
+        run: pnpm test:e2e --project smoke-http
+        env:
+          E2E_SKIP_BUILD: 1
+          E2E_REAL_HTTP: 1
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report

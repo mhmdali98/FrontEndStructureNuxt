@@ -1,0 +1,12 @@
+allowBuilds:
+  '@parcel/watcher': true
+  '@tailwindcss/oxide': true
+  esbuild: true
+  unrs-resolver: true
+  vue-demi: true
+minimumReleaseAgeExclude:
+  - '@nuxt/ui@4.12.2'
+
+# Nuxt UI uses VueUse 14; vaul-vue still pins 10. Keep a single copy (checked by check:bundle).
+overrides:
+  '@vueuse/core': 14.4.0
