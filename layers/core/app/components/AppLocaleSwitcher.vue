@@ -1,17 +1,34 @@
 <script setup lang="ts">
-defineProps<{ block?: boolean }>()
+import type { DropdownMenuItem } from '@nuxt/ui'
+
+/** Icon button that opens a language menu (names, not flags). */
 const appearance = useAppearanceStore()
 const { locales, t } = useI18n()
-const items = computed(() => locales.value.map(l => ({ label: l.name ?? l.code, value: l.code })))
+
+const items = computed<DropdownMenuItem[]>(() => locales.value.map(l => ({
+  label: l.name ?? l.code,
+  type: 'checkbox' as const,
+  checked: appearance.language === l.code,
+  onSelect: () => {
+    appearance.language = l.code as 'en' | 'ar'
+  },
+})))
 </script>
 
 <template>
-  <USelect
-    :model-value="appearance.language"
+  <UDropdownMenu
     :items="items"
-    icon="i-lucide-languages"
-    :aria-label="t('shell.language')"
-    :class="block ? 'w-full' : 'w-36'"
-    @update:model-value="(v) => appearance.language = v as 'en' | 'ar'"
-  />
+    :content="{ align: 'end' }"
+  >
+    <UTooltip :text="t('shell.language')">
+      <UButton
+        color="neutral"
+        variant="ghost"
+        square
+        icon="i-lucide-languages"
+        :aria-label="t('shell.switchLanguage')"
+        data-testid="locale-switcher"
+      />
+    </UTooltip>
+  </UDropdownMenu>
 </template>

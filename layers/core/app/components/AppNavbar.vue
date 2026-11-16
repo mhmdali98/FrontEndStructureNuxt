@@ -98,7 +98,9 @@ const classes = computed(() => [
           @click="customizerOpen = true"
         />
       </UTooltip>
-      <AppLocaleSwitcher class="hidden sm:flex" />
+      <div class="hidden sm:block">
+        <AppLocaleSwitcher />
+      </div>
       <AppColorModeButton class="hidden sm:inline-flex" />
       <AppUserMenu
         compact
