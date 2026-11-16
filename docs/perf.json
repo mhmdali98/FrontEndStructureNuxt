@@ -1,0 +1,23 @@
+{
+  "measuredAt": "2026-11-16T21:33:11.197Z",
+  "mode": "production build, mock API, 0 ms latency, desktop preset, median of 3",
+  "results": {
+    "login": {
+      "performance": 1,
+      "accessibility": 0.96,
+      "best-practices": 1,
+      "cls": 0,
+      "lcpMs": 261,
+      "tbtMs": 0
+    },
+    "home": {
+      "performance": 0.98,
+      "accessibility": 0.96,
+      "best-practices": 0.96,
+      "cls": 0,
+      "lcpMs": 1191,
+      "tbtMs": 0
+    }
+  },
+  "failures": []
+}

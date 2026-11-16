@@ -1,0 +1,41 @@
+{
+  "entry": {
+    "file": "D2yUbEjp.js",
+    "gzipKB": 73
+  },
+  "loginJsGzipKB": 327.1,
+  "loginChunks": 77,
+  "largestChunks": [
+    {
+      "file": "D2yUbEjp.js",
+      "gzipKB": 73
+    },
+    {
+      "file": "eUuEB48J.js",
+      "gzipKB": 58.8
+    },
+    {
+      "file": "UlIMZseN.js",
+      "gzipKB": 34.8
+    },
+    {
+      "file": "D3zMTX8P.js",
+      "gzipKB": 24.9
+    },
+    {
+      "file": "BKCKvkzQ.js",
+      "gzipKB": 24.8
+    }
+  ],
+  "versions": {
+    "vue": [
+      "3.5.45"
+    ],
+    "@vueuse/core": [
+      "14.4.0"
+    ],
+    "reka-ui": [
+      "2.11.0"
+    ]
+  }
+}
