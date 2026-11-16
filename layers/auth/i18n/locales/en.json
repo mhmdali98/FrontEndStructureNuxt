@@ -1,0 +1,44 @@
+{
+  "auth": {
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm password",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
+    },
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your account to continue.",
+      "remember": "Keep me signed in for 30 days",
+      "forgot": "Forgot password?",
+      "submit": "Sign in",
+      "invalid": "The email or password is incorrect.",
+      "throttled": "Too many attempts. Try again in {seconds} seconds."
+    },
+    "forgot": {
+      "title": "Reset your password",
+      "subtitle": "Enter your email and we will send you a reset link.",
+      "submit": "Send reset link",
+      "resend": "Send again",
+      "resendIn": "Send again in {seconds}s",
+      "sentTitle": "Check your inbox",
+      "sentDescription": "If an account exists for {email}, a reset link is on its way."
+    },
+    "reset": {
+      "title": "Choose a new password",
+      "subtitle": "Enter and confirm your new password.",
+      "subtitleFor": "Set a new password for {email}.",
+      "submit": "Update password",
+      "invalid": "This reset link is invalid or has expired.",
+      "done": "Your password was updated. You can sign in now.",
+      "strength": { "0": "Too weak", "1": "Weak", "2": "Fair", "3": "Good", "4": "Strong" }
+    },
+    "backToLogin": "Back to sign in",
+    "demo": {
+      "title": "Demo accounts (password: Password123!)",
+      "roles": { "admin": "Admin", "manager": "Manager", "viewer": "Viewer", "noaccess": "No access" }
+    }
+  }
+}

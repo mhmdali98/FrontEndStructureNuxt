@@ -1,0 +1,47 @@
+{
+  "users": {
+    "nav": "المستخدمون",
+    "title": "المستخدمون",
+    "description": "إدارة أعضاء الفريق وأدوارهم وصلاحيات وصولهم.",
+    "fields": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "roles": "الأدوار",
+      "status": "الحالة",
+      "lastLogin": "آخر تسجيل دخول",
+      "createdAt": "تاريخ الإنشاء",
+      "password": "كلمة المرور الأولية"
+    },
+    "status": { "active": "نشط", "inactive": "غير نشط", "invited": "مدعو" },
+    "filters": { "search": "ابحث بالاسم أو البريد…", "status": "الحالة", "role": "الدور" },
+    "table": {
+      "selectAll": "تحديد كل صفوف هذه الصفحة",
+      "selectRow": "تحديد الصف",
+      "rowActions": "إجراءات {name}"
+    },
+    "actions": {
+      "create": "إضافة مستخدم",
+      "view": "عرض الملف",
+      "cannotDeleteSelf": "لا يمكنك حذف حسابك"
+    },
+    "form": {
+      "createTitle": "إضافة مستخدم",
+      "createDescription": "يمكنه تسجيل الدخول بهذا البريد وكلمة المرور الأولية.",
+      "editTitle": "تعديل المستخدم",
+      "created": "تمت إضافة {name}",
+      "updated": "تم تحديث {name}"
+    },
+    "delete": {
+      "title": "حذف {name}؟",
+      "description": "سيُحذف الحساب نهائيًا ولا يمكن التراجع عن ذلك.",
+      "done": "تم حذف {name}"
+    },
+    "bulk": {
+      "delete": "حذف المحدد",
+      "title": "حذف {count} مستخدمين؟",
+      "done": "تم حذف {count} مستخدمين"
+    },
+    "detail": { "title": "تفاصيل المستخدم", "info": "معلومات الحساب" }
+  }
+}

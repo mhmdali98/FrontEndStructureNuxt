@@ -1,0 +1,24 @@
+{
+  "settings": {
+    "nav": "Settings",
+    "title": "Settings",
+    "description": "Make the workspace yours.",
+    "appearance": {
+      "nav": "Appearance",
+      "title": "Appearance settings"
+    },
+    "language": {
+      "nav": "Language & region",
+      "title": "Language & region",
+      "description": "Choose the interface language and number style.",
+      "preview": "Format preview",
+      "direction": "Text direction",
+      "number": "Number",
+      "currency": "Currency",
+      "percent": "Percent",
+      "date": "Date and time",
+      "rtl": "Right to left",
+      "ltr": "Left to right"
+    }
+  }
+}

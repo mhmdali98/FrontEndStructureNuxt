@@ -1,0 +1,41 @@
+{
+  "profile": {
+    "nav": "My profile",
+    "title": "My profile",
+    "description": "Your personal details and account security.",
+    "general": {
+      "nav": "General",
+      "title": "Personal information",
+      "saved": "Profile saved"
+    },
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "emailHelp": "Contact an administrator to change your email.",
+      "phone": "Phone",
+      "locale": "Preferred language"
+    },
+    "avatar": {
+      "upload": "Change photo",
+      "hint": "PNG or JPG, up to 1 MB.",
+      "saved": "Photo updated",
+      "invalid": "Choose an image up to 1 MB."
+    },
+    "security": {
+      "nav": "Security",
+      "title": "Change password",
+      "description": "Use at least 8 characters. Avoid reusing old passwords.",
+      "current": "Current password",
+      "new": "New password",
+      "confirm": "Confirm new password",
+      "submit": "Update password",
+      "changed": "Password updated",
+      "sessions": "Sessions",
+      "sessionsDescription": "Sign out of every browser and device, including this one.",
+      "everywhere": "Sign out everywhere",
+      "everywhereHint": "Signed in on other devices? End all sessions at once.",
+      "everywhereTitle": "Sign out of all devices?",
+      "everywhereDescription": "Every active session, including this one, will end."
+    }
+  }
+}

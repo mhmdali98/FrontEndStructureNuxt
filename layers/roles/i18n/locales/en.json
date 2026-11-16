@@ -1,0 +1,60 @@
+{
+  "roles": {
+    "nav": "Roles & permissions",
+    "title": "Roles & permissions",
+    "description": "Define what each role can see and do.",
+    "system": "System",
+    "superAdmin": "This role has every permission, including future ones.",
+    "usersCount": "{count} users",
+    "fields": {
+      "name": "Key",
+      "label": "Display name",
+      "permissions": "Permissions"
+    },
+    "groups": {
+      "dashboard": "Dashboard",
+      "reports": "Reports",
+      "users": "Users",
+      "roles": "Roles",
+      "system": "System"
+    },
+    "perm": {
+      "dashboard": {
+        "view": "View dashboard"
+      },
+      "reports": {
+        "view": "View financial reports"
+      },
+      "users": {
+        "view": "View users",
+        "create": "Create users",
+        "update": "Edit users",
+        "delete": "Delete users",
+        "export": "Export users"
+      },
+      "roles": {
+        "view": "View roles",
+        "manage": "Manage roles"
+      },
+      "system": {
+        "debug": "Access debugging tools"
+      }
+    },
+    "actions": {
+      "create": "New role"
+    },
+    "form": {
+      "createTitle": "Create role",
+      "editTitle": "Edit role",
+      "selectAll": "Select all",
+      "systemName": "System role keys cannot be changed.",
+      "created": "Role {name} created",
+      "updated": "Role {name} updated"
+    },
+    "delete": {
+      "title": "Delete the {name} role?",
+      "description": "Users must not be assigned to this role.",
+      "done": "Role {name} deleted"
+    }
+  }
+}

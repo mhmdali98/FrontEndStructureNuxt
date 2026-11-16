@@ -1,0 +1,63 @@
+{
+  "dashboard": {
+    "nav": "Dashboard",
+    "title": "Dashboard",
+    "subtitle": "Here is what is happening with your business.",
+    "rangeLabel": "Date range",
+    "ranges": {
+      "7d": "7 days",
+      "30d": "30 days",
+      "90d": "90 days"
+    },
+    "kpi": {
+      "revenue": "Revenue",
+      "orders": "Orders",
+      "newUsers": "New users",
+      "conversion": "Conversion rate"
+    },
+    "revenue": {
+      "title": "Revenue vs expenses",
+      "description": "Daily totals for the selected period",
+      "revenue": "Revenue",
+      "expenses": "Expenses",
+      "summary": "Total revenue {revenue}, total expenses {expenses}."
+    },
+    "traffic": {
+      "title": "Traffic sources",
+      "description": "Where your visitors come from",
+      "visits": "visits",
+      "summary": "{total} visits in total.",
+      "sources": {
+        "direct": "Direct",
+        "search": "Search",
+        "social": "Social",
+        "referral": "Referral",
+        "email": "Email"
+      }
+    },
+    "orders": {
+      "title": "Orders by status",
+      "description": "Completed, pending and cancelled orders",
+      "completed": "Completed",
+      "pending": "Pending",
+      "cancelled": "Cancelled"
+    },
+    "activity": {
+      "title": "Recent activity",
+      "description": "Latest changes across your workspace",
+      "types": {
+        "user": {
+          "created": "{actor} created the user {target}",
+          "updated": "{actor} updated {target}",
+          "deleted": "{actor} deleted {target}"
+        },
+        "role": {
+          "updated": "{actor} changed permissions of the {target} role"
+        },
+        "auth": {
+          "login": "{actor} signed in"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "dashboard": {
+    "nav": "لوحة التحكم",
+    "title": "لوحة التحكم",
+    "subtitle": "إليك ما يحدث في أعمالك.",
+    "rangeLabel": "الفترة الزمنية",
+    "ranges": {
+      "7d": "7 أيام",
+      "30d": "30 يومًا",
+      "90d": "90 يومًا"
+    },
+    "kpi": {
+      "revenue": "الإيرادات",
+      "orders": "الطلبات",
+      "newUsers": "المستخدمون الجدد",
+      "conversion": "معدل التحويل"
+    },
+    "revenue": {
+      "title": "الإيرادات مقابل المصروفات",
+      "description": "المجاميع اليومية للفترة المحددة",
+      "revenue": "الإيرادات",
+      "expenses": "المصروفات",
+      "summary": "إجمالي الإيرادات {revenue}، وإجمالي المصروفات {expenses}."
+    },
+    "traffic": {
+      "title": "مصادر الزيارات",
+      "description": "من أين يأتي زوارك",
+      "visits": "زيارة",
+      "summary": "{total} زيارة إجمالًا.",
+      "sources": {
+        "direct": "مباشر",
+        "search": "محركات البحث",
+        "social": "التواصل الاجتماعي",
+        "referral": "الإحالات",
+        "email": "البريد الإلكتروني"
+      }
+    },
+    "orders": {
+      "title": "الطلبات حسب الحالة",
+      "description": "الطلبات المكتملة والمعلّقة والملغاة",
+      "completed": "مكتملة",
+      "pending": "معلّقة",
+      "cancelled": "ملغاة"
+    },
+    "activity": {
+      "title": "النشاط الأخير",
+      "description": "آخر التغييرات في مساحة العمل",
+      "types": {
+        "user": {
+          "created": "أنشأ {actor} المستخدم {target}",
+          "updated": "حدّث {actor} بيانات {target}",
+          "deleted": "حذف {actor} المستخدم {target}"
+        },
+        "role": {
+          "updated": "عدّل {actor} صلاحيات دور {target}"
+        },
+        "auth": {
+          "login": "سجّل {actor} الدخول"
+        }
+      }
+    }
+  }
+}

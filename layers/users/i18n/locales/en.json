@@ -1,0 +1,47 @@
+{
+  "users": {
+    "nav": "Users",
+    "title": "Users",
+    "description": "Manage team members, their roles and access.",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "roles": "Roles",
+      "status": "Status",
+      "lastLogin": "Last login",
+      "createdAt": "Created",
+      "password": "Initial password"
+    },
+    "status": { "active": "Active", "inactive": "Inactive", "invited": "Invited" },
+    "filters": { "search": "Search name or email…", "status": "Status", "role": "Role" },
+    "table": {
+      "selectAll": "Select all rows on this page",
+      "selectRow": "Select row",
+      "rowActions": "Actions for {name}"
+    },
+    "actions": {
+      "create": "Add user",
+      "view": "View profile",
+      "cannotDeleteSelf": "You cannot delete yourself"
+    },
+    "form": {
+      "createTitle": "Add a user",
+      "createDescription": "They can sign in with this email and the initial password.",
+      "editTitle": "Edit user",
+      "created": "{name} was added",
+      "updated": "{name} was updated"
+    },
+    "delete": {
+      "title": "Delete {name}?",
+      "description": "This permanently removes the account. This cannot be undone.",
+      "done": "{name} was deleted"
+    },
+    "bulk": {
+      "delete": "Delete selected",
+      "title": "Delete {count} users?",
+      "done": "{count} users deleted"
+    },
+    "detail": { "title": "User details", "info": "Account information" }
+  }
+}
