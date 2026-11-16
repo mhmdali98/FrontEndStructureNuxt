@@ -1,0 +1,81 @@
+import { expect, loginAndWait, test, toast } from './fixtures'
+
+test.describe('users', () => {
+  test('search, filter, sort and paginate sync with the URL', async ({ page }) => {
+    await loginAndWait(page, 'admin')
+    await page.goto('/users')
+    await page.getByTestId('users-search').fill('viewer')
+    await page.waitForURL(/search=viewer/)
+    await expect(page.getByTestId('users-table')).toContainText('viewer@demo.test')
+    await page.goto('/users?sort=name&page=2&status=invited')
+    await expect(page.getByTestId('users-table')).toContainText('Invited')
+    await expect(page.getByTestId('users-table')).not.toContainText('Inactive')
+    await page.getByRole('button', { name: 'Name' }).click()
+    await page.waitForURL(/sort=-name/)
+  })
+
+  test('create shows 422 on duplicate email, then succeeds; delete removes the row', async ({ page }) => {
+    await loginAndWait(page, 'admin')
+    await page.goto('/users')
+    await page.getByTestId('users-create').click()
+    const dialog = page.getByRole('dialog')
+    await dialog.getByLabel('Name').fill('Layla Test')
+    await dialog.getByLabel('Email').fill('admin@demo.test')
+    await dialog.getByRole('button', { name: /Roles/ }).click().catch(() => undefined)
+    await page.getByRole('option', { name: 'Viewer' }).click()
+    await page.keyboard.press('Escape')
+    await dialog.getByLabel('Initial password').fill('Password123!')
+    await dialog.getByRole('button', { name: 'Add user' }).click()
+    await expect(dialog.getByText('The email has already been taken.')).toBeVisible()
+    await dialog.getByLabel('Email').fill('layla.test@example.com')
+    await dialog.getByRole('button', { name: 'Add user' }).click()
+    await expect(toast(page, 'Layla Test was added')).toBeVisible()
+    await page.getByTestId('users-search').fill('layla.test')
+    await expect(page.getByTestId('users-table')).toContainText('layla.test@example.com')
+    await page.getByRole('button', { name: 'Actions for Layla Test' }).click()
+    await page.getByRole('menuitem', { name: 'Delete' }).click()
+    await page.getByRole('dialog').getByRole('button', { name: 'Delete' }).click()
+    await expect(page.getByTestId('users-table')).not.toContainText('layla.test@example.com')
+  })
+
+  test('csv export downloads the current page', async ({ page }) => {
+    await loginAndWait(page, 'admin')
+    await page.goto('/users')
+    await expect(page.getByTestId('users-table')).toContainText('@')
+    const [download] = await Promise.all([page.waitForEvent('download'), page.getByTestId('users-export').click()])
+    expect(download.suggestedFilename()).toMatch(/^users-.*\.csv$/)
+  })
+
+  test('unknown user id shows the 404 view', async ({ page }) => {
+    await loginAndWait(page, 'admin')
+    await page.goto('/users/u-does-not-exist')
+    await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible()
+  })
+})
+
+test.describe('profile', () => {
+  test('update profile and change password (with 422 mapping)', async ({ page }) => {
+    await loginAndWait(page, 'admin')
+    await page.goto('/profile')
+    await page.getByLabel('Full name').fill('Sara Updated')
+    await page.getByTestId('profile-save').click()
+    await expect(toast(page, 'Profile saved')).toBeVisible()
+    await page.goto('/profile/security')
+    await page.getByLabel('Current password').fill('wrong-one')
+    await page.getByLabel('New password', { exact: true }).fill('NewPassword1!')
+    await page.getByLabel('Confirm new password').fill('NewPassword1!')
+    await page.getByTestId('password-submit').click()
+    await expect(page.getByText('The current password is incorrect.')).toBeVisible()
+    await page.getByLabel('Current password').fill('Password123!')
+    await page.getByTestId('password-submit').click()
+    await expect(toast(page, 'Password updated')).toBeVisible()
+  })
+
+  test('avatar upload', async ({ page }) => {
+    await loginAndWait(page, 'admin')
+    await page.goto('/profile')
+    const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==', 'base64')
+    await page.getByTestId('avatar-input').setInputFiles({ name: 'a.png', mimeType: 'image/png', buffer: png })
+    await expect(toast(page, 'Photo updated')).toBeVisible()
+  })
+})
