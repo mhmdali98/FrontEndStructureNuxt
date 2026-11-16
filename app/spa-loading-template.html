@@ -1,0 +1,10 @@
+<style>
+  #app-boot{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#fff}
+  #app-boot span{width:28px;height:28px;border-radius:9999px;border:3px solid #e2e8f0;border-top-color:#64748b;animation:app-boot-spin .8s linear infinite}
+  html.dark #app-boot{background:#0f172a}
+  html.dark #app-boot span{border-color:#334155;border-top-color:#94a3b8}
+  @media (prefers-color-scheme: dark){html:not(.light) #app-boot{background:#0f172a}html:not(.light) #app-boot span{border-color:#334155;border-top-color:#94a3b8}}
+  @keyframes app-boot-spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion: reduce){#app-boot span{animation-duration:2s}}
+</style>
+<div id="app-boot" role="status" aria-live="polite"><span></span></div>

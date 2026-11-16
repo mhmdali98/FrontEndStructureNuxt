@@ -1,0 +1,262 @@
+{
+  "common": {
+    "retry": "Retry",
+    "copyId": "Copy ID",
+    "copied": "Copied to clipboard",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save changes",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "close": "Close",
+    "back": "Go back",
+    "home": "Go home",
+    "search": "Search",
+    "loading": "Loading…",
+    "actions": "Actions",
+    "all": "All",
+    "reset": "Reset",
+    "refresh": "Refresh",
+    "noResults": "No results found",
+    "export": "Export",
+    "clear": "Clear",
+    "optional": "Optional",
+    "yes": "Yes",
+    "no": "No",
+    "showing": "Showing {from}–{to} of {total}",
+    "perPage": "Rows per page",
+    "selected": "{count} selected",
+    "columns": "Columns",
+    "filters": "Filters",
+    "never": "Never",
+    "signIn": "Sign in",
+    "logout": "Log out",
+    "emptyTitle": "Nothing here yet",
+    "emptyHint": "When there is data, it will show up here.",
+    "loadError": "Could not load this section",
+    "greeting": {
+      "morning": "Good morning, {name}",
+      "afternoon": "Good afternoon, {name}",
+      "evening": "Good evening, {name}"
+    },
+    "deltaAria": "Change versus previous period: {value}"
+  },
+  "shell": {
+    "skipToContent": "Skip to content",
+    "toggleSidebar": "Toggle sidebar",
+    "openMenu": "Open menu",
+    "search": "Search…",
+    "searchPlaceholder": "Search pages and actions…",
+    "pages": "Pages",
+    "quickActions": "Actions",
+    "customize": "Customize",
+    "language": "Language",
+    "colorMode": "Color mode",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggleColorMode": "Toggle color mode",
+    "switchLanguage": "Switch language",
+    "openCustomizer": "Open customizer",
+    "userMenu": "User menu",
+    "shortcuts": "Keyboard shortcuts",
+    "logoutTitle": "Log out?",
+    "logoutDescription": "You will need to sign in again to continue.",
+    "offline": "You are offline. Changes will not be saved until the connection is back.",
+    "breadcrumbHome": "Home"
+  },
+  "nav": {
+    "groups": {
+      "main": "Overview",
+      "management": "Management",
+      "system": "System"
+    },
+    "debug": "Error lab"
+  },
+  "session": {
+    "expired": "Your session has expired. Please sign in again."
+  },
+  "errors": {
+    "network": "Cannot reach the server. Check your connection and try again.",
+    "offline": "You are offline.",
+    "forbidden": "You do not have permission to do that.",
+    "tooManyRequests": "Too many requests. Try again in {seconds} seconds.",
+    "server": "Something went wrong on our side.",
+    "traceId": "Reference: {id}",
+    "generic": "The request failed.",
+    "validation": "Please check the highlighted fields.",
+    "pages": {
+      "401": {
+        "title": "Session expired",
+        "description": "Please sign in again to continue."
+      },
+      "403": {
+        "title": "Access denied",
+        "description": "You do not have permission to view this page."
+      },
+      "404": {
+        "title": "Page not found",
+        "description": "The page you are looking for does not exist or was moved."
+      },
+      "419": {
+        "title": "Page expired",
+        "description": "Your session expired. Please sign in again."
+      },
+      "429": {
+        "title": "Too many requests",
+        "description": "Slow down a little and try again shortly."
+      },
+      "500": {
+        "title": "Something went wrong",
+        "description": "An unexpected error occurred. Try again in a moment."
+      },
+      "503": {
+        "title": "Under maintenance",
+        "description": "We are making improvements. We will be back shortly."
+      },
+      "default": {
+        "title": "Unexpected error",
+        "description": "Something did not work as expected."
+      }
+    },
+    "noAccess": {
+      "title": "Your account has no permissions yet",
+      "description": "Ask an administrator to assign you a role, then sign in again."
+    },
+    "maintenance": {
+      "checking": "Checking every 30 seconds…",
+      "back": "We are back! Redirecting…"
+    }
+  },
+  "devErrors": {
+    "title": "Error lab",
+    "description": "Trigger every error type to preview how the app responds.",
+    "trigger": "Trigger {status}",
+    "views": "Error views",
+    "preview": "Preview {status}",
+    "offline": "Simulate offline",
+    "network": "Network error",
+    "statuses": {
+      "400": "Bad request → toast",
+      "401": "Unauthenticated → session expired",
+      "403": "Forbidden → toast + /me refetch",
+      "404": "Not found → inline",
+      "409": "Conflict → toast",
+      "422": "Validation → form fields",
+      "429": "Rate limited → countdown",
+      "500": "Server error → toast with trace ID",
+      "503": "Maintenance → maintenance page"
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Enter a valid email address",
+    "min": "Must be at least {min} characters",
+    "max": "Must be at most {max} characters",
+    "passwordMin": "Password must be at least 8 characters",
+    "passwordMatch": "Passwords do not match",
+    "phone": "Enter a valid phone number",
+    "atLeastOne": "Select at least one option",
+    "slug": "Use lowercase letters, digits, dashes or underscores"
+  },
+  "appearance": {
+    "title": "Appearance",
+    "description": "Personalize colors, layout and density. Changes apply instantly.",
+    "presets": "Presets",
+    "presetNames": {
+      "default": "Default",
+      "ocean": "Ocean",
+      "forest": "Forest",
+      "sunset": "Sunset",
+      "mono": "Mono"
+    },
+    "primary": "Primary color",
+    "secondary": "Secondary color",
+    "neutral": "Neutral palette",
+    "radius": "Corner radius",
+    "colorMode": "Color mode",
+    "layout": "Layout",
+    "layouts": {
+      "sidebar": "Sidebar",
+      "topnav": "Top navigation"
+    },
+    "sidebarVariant": "Sidebar style",
+    "sidebarVariants": {
+      "sidebar": "Classic",
+      "floating": "Floating",
+      "inset": "Inset"
+    },
+    "sidebarCollapsible": "Sidebar collapse",
+    "sidebarCollapsibles": {
+      "icon": "To icons",
+      "offcanvas": "Hide fully",
+      "none": "Always open"
+    },
+    "sidebarMobileHint": "On small screens the sidebar always opens as a slide-over menu.",
+    "navbarPosition": "Navbar position",
+    "navbarPositions": {
+      "sticky": "Sticky",
+      "static": "Static"
+    },
+    "navbarStyle": "Navbar style",
+    "navbarStyles": {
+      "solid": "Solid",
+      "blur": "Blurred",
+      "floating": "Floating"
+    },
+    "contentWidth": "Content width",
+    "contentWidths": {
+      "full": "Full width",
+      "boxed": "Boxed"
+    },
+    "density": "Density",
+    "densities": {
+      "comfortable": "Comfortable",
+      "compact": "Compact"
+    },
+    "numerals": "Arabic numerals",
+    "numeralOptions": {
+      "latn": "Western (123)",
+      "arab": "Arabic-Indic (١٢٣)"
+    },
+    "reset": "Reset to defaults",
+    "resetDone": "Appearance reset to defaults",
+    "preview": "Live preview",
+    "customizer": "Customize appearance"
+  },
+  "colors": {
+    "brand": "Brand",
+    "red": "Red",
+    "orange": "Orange",
+    "amber": "Amber",
+    "yellow": "Yellow",
+    "lime": "Lime",
+    "green": "Green",
+    "emerald": "Emerald",
+    "teal": "Teal",
+    "cyan": "Cyan",
+    "sky": "Sky",
+    "blue": "Blue",
+    "indigo": "Indigo",
+    "violet": "Violet",
+    "purple": "Purple",
+    "fuchsia": "Fuchsia",
+    "pink": "Pink",
+    "rose": "Rose",
+    "zinc": "Zinc",
+    "slate": "Slate",
+    "gray": "Gray",
+    "neutral": "Neutral",
+    "stone": "Stone"
+  },
+  "shellAuth": {
+    "headline": "Run your operations from one calm, fast dashboard.",
+    "subhead": "Role-based access, bilingual by design, and a look you can make your own.",
+    "bullets": {
+      "secure": "Tokens never touch the browser — sessions are sealed server-side.",
+      "i18n": "English and Arabic with full right-to-left support.",
+      "theming": "Live theming: colors, layout, sidebar and density."
+    }
+  }
+}
